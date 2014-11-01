@@ -730,4 +730,5 @@ class SpatialImage(object):
         consider using viewer.show() (equivalently plt.show()) to show
         the figure.
         """
-        return OrthoSlicer3D(self.get_data(), self.get_affine())
+        return OrthoSlicer3D(self.get_data(), self.get_affine(),
+                             title=self.get_filename())
